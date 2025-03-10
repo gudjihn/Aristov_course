@@ -6,6 +6,7 @@ wget https://storage.googleapis.com/thaibus/thai_medium.tar.gz && tar -xf thai_m
 
 postgres=# \c thai
 You are now connected to database "thai" as user "postgres".
+
 thai=#  select count(*) from book.tickets;
   count
 ----------
