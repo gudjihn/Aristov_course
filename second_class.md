@@ -1,7 +1,9 @@
 sudo -u postgres psql
 
 begin;
+
 BEGIN
+
 =*# CREATE TABLE persons(id serial, first_name text, second_name text);
 
 CREATE TABLE
@@ -44,7 +46,7 @@ SELECT * FROM people;
 
   1 | dmitry     | dmitryev
 
-(2 rows)
+(1 row)
 
 -- видите ли вы новую запись и если да то почему?
 
@@ -111,10 +113,15 @@ COMMIT;
 SELECT * FROM people;
 
  id | first_name | second_name
+ 
 ----+------------+-------------
+
   1 | dmitry     | dmitryev
+
   2 | elena      | koroleva
+
   3 | polina     | tsvetkova
+
 (3 rows)
 
 -- видите ли вы новую запись и если да то почему?
