@@ -106,13 +106,13 @@ Time: 50424.614 ms (00:50.425)
  * _END_
  * _$do$;_
 
-NOTICE:  Step = 1
-NOTICE:  Step = 2
-NOTICE:  Step = 3
-NOTICE:  Step = 4
-NOTICE:  Step = 5
-NOTICE:  Step = 6
-NOTICE:  Step = 7
-NOTICE:  Step = 8
-NOTICE:  Step = 9
-NOTICE:  Step = 10
+* NOTICE:  Step = 1
+* NOTICE:  Step = 2
+* NOTICE:  Step = 3
+* NOTICE:  Step = 4
+* NOTICE:  Step = 5
+* NOTICE:  Step = 6
+* NOTICE:  Step = 7
+* NOTICE:  Step = 8
+* NOTICE:  Step = 9
+* NOTICE:  Step = 10
