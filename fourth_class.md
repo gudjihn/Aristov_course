@@ -35,4 +35,5 @@
 * 2025-03-27 17:29:42 MSK [1647001-21] [local] postgres@thai [app: psql] STATEMENT:  UPDATE accounts SET amount = amount + 1 WHERE id = 2;
 * 2025-03-27 17:29:42 MSK [1647001-22] [local] postgres@thai [app: psql] LOG:  duration: 7996.758 ms  statement: UPDATE accounts SET amount = amount + 1 WHERE id = 2;
 ```
+* Конец домашнего задания
 
