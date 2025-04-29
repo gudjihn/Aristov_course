@@ -10,6 +10,7 @@
 
 
 1. Сгенерировать таблицу с 1 млн JSONB документов
+```sql 
 DROP TABLE IF EXISTS dz10;
 CREATE TABLE IF NOT EXISTS dz10 (
     id int,
@@ -61,14 +62,18 @@ CREATE INDEX idx_dz10_object_value ON dz10((data ->> 'object_value'));
 name                    |total_size|table_size|indexes_size|toast_size|
 ------------------------+----------+----------+------------+----------+
 pg_toast.pg_toast_422933|548 MB    |24 MB     |2184 kB     |522 MB    |
-
+```
 
 3. Обновить 1 из полей в json
+
+```sql
 UPDATE dz10
 SET data = 
 	jsonb_set(data, '{object_value}', ((DATA->>'object_value')::numeric * 2)::text::jsonb);
-
+```
 4. Убедиться в блоатинге TOAST
+
+```sql
 name                    |total_size|table_size|indexes_size|toast_size|
 ------------------------+----------+----------+------------+----------+
 pg_toast.pg_toast_422933|1102 MB   |48 MB     |6768 kB     |1048 MB   |
@@ -85,7 +90,7 @@ REINDEX INDEX CONCURRENTLY idx_dz10_object_value;
 name                    |total_size|table_size|indexes_size|toast_size|
 ------------------------+----------+----------+------------+----------+
 pg_toast.pg_toast_422933|574 MB    |24 MB     |2616 kB     |547 MB    |
-
+```
 
 Придумать методы избавится от него и проверить на практике
 Полностью избавиться от блоатинга TOAST, наверное никак.
